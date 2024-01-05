@@ -14,7 +14,8 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "gopls",
-                    "lua_ls"
+                    "lua_ls",
+                    "pyright"
                 },
                 handlers = {
                     lsp.default_setup,
@@ -25,6 +26,16 @@ return {
             local cfg = require("lspconfig")
             cfg.lua_ls.setup({})
             cfg.gopls.setup({})
+            cfg.pyright.setup({})
+
+            local cmp = require('cmp')
+            local cmp_select = {behavior = cmp.SelectBehavior.Select}
+            lsp.defaults.cmp_mappings({
+                ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+                ["<C-Space>"] = cmp.mapping.complete(),
+            })
         end
     },
 }
