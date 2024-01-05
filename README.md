@@ -4,7 +4,7 @@ My minimalist neovim config
 
 ### Requirements
 
-1. [neovim](https://github.com/neovim/neovim) > v0.09.0
+1. [neovim](https://github.com/neovim/neovim) > v0.9.0
 
 2. [ripgrep](https://github.com/BurntSushi/ripgrep)
 
