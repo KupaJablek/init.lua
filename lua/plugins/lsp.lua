@@ -15,7 +15,8 @@ return {
                 ensure_installed = {
                     "gopls",
                     "lua_ls",
-                    "pyright"
+                    "pyright",
+                    "rust_analyzer"
                 },
                 handlers = {
                     lsp.default_setup,
@@ -27,6 +28,7 @@ return {
             cfg.lua_ls.setup({})
             cfg.gopls.setup({})
             cfg.pyright.setup({})
+            cfg.rust_analyzer.setup({})
 
             local cmp = require('cmp')
             local cmp_select = {behavior = cmp.SelectBehavior.Select}
