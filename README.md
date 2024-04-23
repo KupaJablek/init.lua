@@ -1,6 +1,6 @@
 ## init.lua
 
-My minimalist neovim config
+My minimalist neovim config I use for school and personal projects.
 
 ### Requirements
 
@@ -14,5 +14,23 @@ My minimalist neovim config
 
 ### Installation
 
-Clone this repo to **~/.config/nvim**
+1. Backup existing nvim config if you have one:
+
+`mv ~/.config/nvim/ ~/.config/nvim.bak/`
+
+2. Clone this repo to **~/.config/nvim**
 > git clone https://github.com/KupaJablek/init.lua.git ~/.config/nvim/
+
+3. Run neovim and wait for [lazy.nvim](https://github.com/folke/lazy.nvim) to install and sync all of your packages!
+
+### Remaps + Settings
+
+Plugin configs, setup and mappings can be found in their respective files in `/lua/plugins/*that_plugin*.lua`
+
+General Editor settings can be found below:
+
+|    setting     |      file     |
+| -------------- | ------------- |
+| Colours        | `colours.lua` |
+| General remaps | `remaps.lua`  |
+| Vim options    | `opts.lua`    |
