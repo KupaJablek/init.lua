@@ -24,7 +24,8 @@ return {
                     "gopls",
                     "lua_ls",
                     "pyright",
-                    "rust_analyzer"
+                    "rust_analyzer",
+                    "clangd"
                 },
                 handlers = {
                     lsp.default_setup,
@@ -34,6 +35,7 @@ return {
                         require('lspconfig').gopls.setup({})
                         require('lspconfig').pyright.setup({})
                         require('lspconfig').rust_analyzer.setup({})
+                        require('lspconfig').clangd.setup({})
                     end,
                 },
             })
