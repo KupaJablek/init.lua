@@ -25,6 +25,7 @@ return {
                     "lua_ls",
                     "pyright",
                     "rust_analyzer",
+                    "htmx",
                     "clangd"
                 },
                 handlers = {
@@ -32,6 +33,7 @@ return {
                     lua_ls = function()
                         local lua_opts = lsp.nvim_lua_ls()
                         require('lspconfig').lua_ls.setup(lua_opts)
+                        require('lspconfig').htmx.setup({})
                         require('lspconfig').gopls.setup({})
                         require('lspconfig').pyright.setup({})
                         require('lspconfig').rust_analyzer.setup({})
